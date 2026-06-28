@@ -3,8 +3,11 @@ import CardWrapper, { Card } from "../../ui/dashboard/cards";
 import LatestInvoices from "../../ui/dashboard/latest-invoices";
 import RevenueChart from "../../ui/dashboard/revenue-chart";
 import { CardSkeleton, LatestInvoicesSkeleton, RevenueChartSkeleton } from "@/app/ui/skeletons";
+import { notFound } from "next/navigation";
 
 export default async function Page() {
+    // throw new Error("problema inesperado");
+    notFound();
     return (
     <main>
         <h1 className="mb-4 text-xl md:text-2x1">
