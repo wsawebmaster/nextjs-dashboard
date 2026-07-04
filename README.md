@@ -7,31 +7,29 @@ Um projeto de dashboard moderno desenvolvido com **Next.js 15+**, **TypeScript**
 Antes de começar, certifique-se de ter instalado:
 
 - **Node.js** (versão 18+)
-- **pnpm** (gerenciador de pacotes recomendado)
-
-Se você não tiver o pnpm instalado, execute:
-```bash
-npm install -g pnpm
-```
+- **npm**
 
 ## 🚀 Como Começar
 
 ### 1. Instalar dependências
+
 ```bash
-pnpm install
+npm install
 ```
 
 ### 2. Executar o servidor de desenvolvimento
+
 ```bash
-pnpm dev
+npm run dev
 ```
 
 A aplicação estará disponível em [http://localhost:3000](http://localhost:3000)
 
 ### 3. Compilar para produção
+
 ```bash
-pnpm build
-pnpm start
+npm run build
+npm start
 ```
 
 ## 📁 Estrutura do Projeto
@@ -59,11 +57,11 @@ app/
 
 ## 🛠️ Tecnologias Utilizadas
 
-- **Next.js 15** - Framework React com Server Components
-- **React 19** - Biblioteca de UI
-- **TypeScript** - Tipagem estática
-- **Tailwind CSS** - Framework de CSS utilitário
-- **pnpm** - Gerenciador de pacotes moderno
+- **Next.js 15.0.0-canary.127** - Framework React com Server Components
+- **React 19.0.0-rc-1eaccd82-20240816** - Biblioteca de UI
+- **TypeScript 5.7.3** - Tipagem estática
+- **Tailwind CSS 3.4.17** - Framework de CSS utilitário
+- **npm** - Gerenciador de pacotes
 
 ## 💡 Funcionalidades Principais
 
@@ -72,7 +70,7 @@ app/
 ✅ Paginação de dados  
 ✅ Formulários para criar/editar faturas  
 ✅ Componentes reutilizáveis com Tailwind CSS  
-✅ Integração com Server Components do Next.js  
+✅ Integração com Server Components do Next.js
 
 ## 📚 Próximos Passos
 
@@ -92,7 +90,24 @@ app/
 ## 🤝 Contribuindo
 
 Para sugestões ou melhorias, sinta-se livre para criar um pull request ou abrir uma issue.
+**Desenvolvido a partir de parceria entre Impacta e Avanade**
 
 ---
+---
 
-**Desenvolvido com ❤️ por [Avanade](https://www.avanade.com/pt-br)**
+## 👨🏻‍💻 Contato
+
+<p style="padding-top:5px">
+	<img src="https://avatars.githubusercontent.com/u/52001930?s=400&u=fb999c966c5c652a8357cbede4b1112e79cbfe18&v=4" alt="avatar" style="width:96px;height:96px;border-radius:50%;object-fit:cover;">
+
+<p>&nbsp&nbsp&nbsp Wagner Andrade<br>
+    &nbsp&nbsp&nbsp
+    <a href="https://github.com/wsawebmaster">
+    GitHub</a>&nbsp;|&nbsp;
+    <a href="https://www.linkedin.com/in/
+wsawebmaster">LinkedIn</a>
+&nbsp;|&nbsp;
+<a href="mailto:wsawebmaster@yahoo.com.br">
+    Email</a>
+  &nbsp;|&nbsp;
+</p>
