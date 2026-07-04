@@ -25,6 +25,12 @@ npm run dev
 
 A aplicação estará disponível em [http://localhost:3000](http://localhost:3000)
 
+### Acesso ao projeto
+
+- Projeto: [http://localhost:3000](http://localhost:3000)
+- Usuário: `user@nextmail.com`
+- Senha: `123456`
+
 ### 3. Compilar para produção
 
 ```bash
@@ -93,6 +99,7 @@ Para sugestões ou melhorias, sinta-se livre para criar um pull request ou abrir
 **Desenvolvido a partir de parceria entre Impacta e Avanade**
 
 ---
+
 ---
 
 ## 👨🏻‍💻 Contato
