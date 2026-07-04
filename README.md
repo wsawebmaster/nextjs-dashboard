@@ -1,15 +1,15 @@
-# Dashboard Next.js - Projeto Educativo
+# Dashboard Next.js
 
-Um projeto de dashboard moderno desenvolvido com **Next.js 15+**, **TypeScript** e **Tailwind CSS**. Este é um starter template para aprender os conceitos fundamentais do Next.js App Router.
+Este projeto é uma aplicação de painel administrativo construída com Next.js, TypeScript, Tailwind CSS e NextAuth. Ele inclui uma área protegida de dashboard com páginas para clientes, faturas e visão geral, além de rotas de API e dados mockados para demonstração.
 
 ## 📋 Requisitos
 
 Antes de começar, certifique-se de ter instalado:
 
-- **Node.js** (versão 18+)
-- **npm**
+- Node.js 18 ou superior
+- npm
 
-## 🚀 Como Começar
+## 🚀 Como rodar o projeto
 
 ### 1. Instalar dependências
 
@@ -17,86 +17,91 @@ Antes de começar, certifique-se de ter instalado:
 npm install
 ```
 
-### 2. Executar o servidor de desenvolvimento
+### 2. Iniciar o servidor de desenvolvimento
 
 ```bash
 npm run dev
 ```
 
-A aplicação estará disponível em [http://localhost:3000](http://localhost:3000)
+A aplicação ficará disponível em [http://localhost:3000](http://localhost:3000)
 
-### Endpoints disponíveis
+Aplicação está disponível também através do link [https://nextjs-dashboard-lime-zeta-45.vercel.app/](https://nextjs-dashboard-lime-zeta-45.vercel.app/)
 
-- `/` - Página inicial / login
-- `/login` - Página de login (redireciona para `/` se já estiver logado)
-- `/dashboard` - Painel principal após autenticação
-- `/dashboard/customers` - Lista de clientes
-- `/dashboard/invoices` - Lista de faturas
-- `/api/auth/[...nextauth]` - Endpoints de autenticação do NextAuth
-- `/query` - Exemplo de rota de API de consulta
-- `/seed` - Rota de seed para popular dados de exemplo
+### 3. Popular dados de exemplo (opcional)
 
-### Acesso ao projeto
+```bash
+npm run seed
+```
 
-- Projeto: [http://localhost:3000](http://localhost:3000)
-- Usuário: `user@nextmail.com`
-- Senha: `123456`
-
-### 3. Compilar para produção
+### 4. Build para produção
 
 ```bash
 npm run build
 npm start
 ```
 
-## 📁 Estrutura do Projeto
+## 🔐 Acesso inicial
 
-```
+Para entrar na aplicação, use as credenciais de demonstração abaixo:
+
+- E-mail: user@nextmail.com
+- Senha: 123456
+
+Essas credenciais são utilizadas pelo fluxo de autenticação do NextAuth e também têm fallback para dados placeholder caso o banco não esteja configurado.
+
+## 🧭 Rotas principais
+
+- / - página inicial com opção de login
+- /login - tela de autenticação
+- /dashboard - visão geral do dashboard
+- /dashboard/customers - lista de clientes
+- /dashboard/invoices - lista de faturas
+- /api/auth/[...nextauth] - endpoints de autenticação do NextAuth
+- /query - rota de exemplo para consulta
+- /seed - rota usada para popular dados iniciais
+
+## 📁 Estrutura do projeto
+
+```text
 app/
-├── layout.tsx              # Layout raiz da aplicação
-├── page.tsx                # Página inicial (login)
-├── dashboard/
-│   ├── layout.tsx         # Layout do dashboard
-│   ├── page.tsx           # Página principal do dashboard
-│   ├── customers/         # Seção de clientes
-│   └── invoices/          # Seção de faturas
-├── lib/                   # Funções utilitárias
-│   ├── data.ts            # Dados mockados
-│   ├── definitions.ts     # Tipos TypeScript
-│   └── utils.ts           # Funções auxiliares
-├── ui/                    # Componentes reutilizáveis
-│   ├── global.css         # Estilos globais
-│   ├── dashboard/         # Componentes específicos do dashboard
-│   ├── invoices/          # Componentes de faturas
-│   └── customers/         # Componentes de clientes
-└── query/                 # Rota de API (exemplo)
+  api/                # rotas de API
+  dashboard/          # páginas protegidas do painel
+  lib/                # dados, definições e utilidades
+  ui/                 # componentes de interface
+  page.tsx            # página inicial
+  layout.tsx          # layout raiz
+auth.ts               # configuração do NextAuth
+auth.config.ts       # configurações de autenticação
+middleware.ts         # proteção de rotas do dashboard
+scripts/              # scripts auxiliares, como seed
+public/               # arquivos estáticos
 ```
 
-## 🛠️ Tecnologias Utilizadas
+## 🛠️ Stack utilizada
 
-- **Next.js 15.0.0-canary.127** - Framework React com Server Components
-- **React 19.0.0-rc-1eaccd82-20240816** - Biblioteca de UI
-- **TypeScript 5.7.3** - Tipagem estática
-- **Tailwind CSS 3.4.17** - Framework de CSS utilitário
-- **npm** - Gerenciador de pacotes
+- Next.js 16
+- React 18
+- TypeScript
+- Tailwind CSS
+- NextAuth
+- Vercel Postgres
+- Utilitários do projeto para dados e formulários
 
-## 💡 Funcionalidades Principais
+## ✨ Funcionalidades presentes
 
-✅ Dashboard responsivo com gráficos e cards  
-✅ Tabela de clientes e faturas  
-✅ Paginação de dados  
-✅ Formulários para criar/editar faturas  
-✅ Componentes reutilizáveis com Tailwind CSS  
-✅ Integração com Server Components do Next.js
+- Página inicial e fluxo de login
+- Dashboard com cards, gráfico de receita e lista de faturas recentes
+- Páginas para clientes e faturas
+- Formulários para criar e editar faturas
+- Autenticação protegendo rotas do painel
+- Dados mockados e seed para demonstração
 
-## 📚 Próximos Passos
+## ⚙️ Variáveis de ambiente
 
-1. **Explorar os componentes** - Abra os arquivos em `app/ui/` para entender como os componentes são estruturados
-2. **Conectar a um banco de dados** - Integre Prisma ou outra solução de ORM com seu banco preferido
-3. **Implementar autenticação** - Adicione NextAuth.js ou outra biblioteca de autenticação
-4. **Criar testes** - Configure Jest ou Vitest para testes unitários
-5. **Otimizar performance** - Use Next.js Image, Code Splitting e outras técnicas
+Para uso com persistência de dados e autenticação mais real, considere configurar variáveis como:
 
+- NEXTAUTH_SECRET
+- POSTGRES_URL (ou as variáveis de conexão do provedor usado)
 ## 🔗 Recursos Úteis
 
 - [Documentação Next.js](https://nextjs.org/docs)
@@ -104,12 +109,11 @@ app/
 - [Documentação Tailwind CSS](https://tailwindcss.com/docs)
 - [Repositório Next.js Examples](https://github.com/vercel/next.js/tree/canary/examples)
 
-## 🤝 Contribuindo
+## 🤝 Contribuição
 
-Para sugestões ou melhorias, sinta-se livre para criar um pull request ou abrir uma issue.
-**Desenvolvido a partir de parceria entre Impacta e Avanade**
+Sugestões e melhorias são bem-vindas. Para contribuir, abra uma issue ou envie um pull request.
 
----
+Desenvolvido a partir de treinamento em parceria da Impacta com a Avanade.
 
 ---
 
