@@ -25,6 +25,17 @@ npm run dev
 
 A aplicação estará disponível em [http://localhost:3000](http://localhost:3000)
 
+### Endpoints disponíveis
+
+- `/` - Página inicial / login
+- `/login` - Página de login (redireciona para `/` se já estiver logado)
+- `/dashboard` - Painel principal após autenticação
+- `/dashboard/customers` - Lista de clientes
+- `/dashboard/invoices` - Lista de faturas
+- `/api/auth/[...nextauth]` - Endpoints de autenticação do NextAuth
+- `/query` - Exemplo de rota de API de consulta
+- `/seed` - Rota de seed para popular dados de exemplo
+
 ### Acesso ao projeto
 
 - Projeto: [http://localhost:3000](http://localhost:3000)
